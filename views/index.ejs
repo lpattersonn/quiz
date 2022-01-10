@@ -1,19 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Home Page</title>
-
+    <title>Quizlett</title>
     <link rel="stylesheet" href="/vendor/normalize-4.1.1.css" type="text/css" />
     <link rel="stylesheet" href="/vendor/border-box.css" type="text/css" />
     <link rel="stylesheet" href="/styles/main.css" type="text/css" />
     <link rel="stylesheet" href="/styles/layout.css" type="text/css" />
-
     <script type="text/javascript" src="/vendor/jquery-3.0.0.js"></script>
     <script type="text/javascript" src="/scripts/app.js"></script>
   </head>
   <header>
+    <!-- Nav -->
     <section class="nav_logo">
-      <h1>Quizlet</h1>
+      <h1>Quizlett</h1>
     </section>
     <section>
       <nav>
@@ -30,15 +29,39 @@
   <body>
    <div class="mainbody">
     <img class="main_image" src="https://media.istockphoto.com/vectors/quiz-in-comic-pop-art-style-quiz-brainy-game-word-vector-illustration-vector-id1186386668?k=20&m=1186386668&s=612x612&w=0&h=tUvqWXoNa2OsJ1YsvZwr3JKOggtzfr_KHuopigindPA=" alt="midterm_group_5">
+    <!-- Search Area -->
     <div class="mainpage_searcharea">
       <div>
         <input type="text" placeholder="Search..." class="main_search" name="search">
       </div>
+    <div class="button_arrow">
       <div class="main_button">
         <button class="search_button" type="submit">Search</button>
         <button class="mainpage_quizbutton" type="submit">Start Quiz</button>
       </div>
+        <div class="arrow">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        </div>
   </div>
-    <div>
+      <article class="quiz_questions">
+        <div>
+        <ul class="quiz_head">
+          <li><b>Subject</b></li>
+          <li><b>Description</b></li>
+        </ul>
+        </div>
+        <div>
+        <ul class="quiz_body">
+          <% if (rows) { %>
+            <li><%= rows[0].subject %></li>
+            <li><%= rows[0].description %></li>
+            <button class="article_button" type="submit">Start Quiz</button>
+          <% } %>
+          </ul>
+          </div>
+      </article>
   </body>
 </html>

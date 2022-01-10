@@ -1,27 +1,18 @@
-/* inports */
-@import url('https://fonts.googleapis.com/css2?family=Bangers&display=swap');
+/* Inports */
+@import url("https://fonts.googleapis.com/css2?family=Bangers&display=swap");
 
 body {
+  font-family: sans-serif;
   display: flex;
   justify-content: center;
   align-items: center;
   min-height: 100vh;
-
   background-color: white;
-  /*background: linear-gradient(
-    227deg,
-    rgba(163, 208, 219, 1) 0%,
-    rgba(163, 176, 219, 1) 20%,
-    rgba(163, 173, 219, 1) 34%,
-    rgba(163, 219, 208, 1) 59%,
-    rgba(163, 208, 219, 1) 74%,
-    rgba(163, 208, 219, 1) 100%
-  );*/
 }
 
 /* nav section */
-
 header {
+  font-family: sans-serif;
   position: absolute;
   top: 0;
   width: 100%;
@@ -31,23 +22,25 @@ header {
   padding: 1em;
 }
 
-/* logo */
+/* Logo */
 .nav_logo h1 {
-font-family: "Bangers", sans-serif;
-font-size: 40px;
+  font-family: "Bangers", sans-serif;
+  font-size: 40px;
+  margin-left: 7px;
 }
 
-/* nav links */
+/* Nav links */
 .nav_links {
   color: black;
   text-decoration: none;
   font-size: 18px;
   display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-direction: row;
 }
-.nav_links li, a {
+.nav_links li,
+a {
   text-decoration: none;
   color: black;
 }
@@ -56,36 +49,31 @@ font-size: 40px;
   list-style: none;
 }
 
-/* main page form */
-
-/*.mainpage_form {
-  height: 60px;
-  width: 100%;
-  border-width: 2px;
-  border-color: black;
-  align-items: center;
-  padding: 0 35px;
-  display: flex;
-}*/
-
-/* mainpage search area div */
+/* Main page form */
 .main_button {
   padding-top: 25px;
+  margin-bottom: 65px;
   display: flex;
-    justify-content: center;
-    flex-direction: row;
-
+  justify-content: center;
+  flex-direction: row;
+}
+.button_arrow {
+  margin-bottom: 30px;
+  display: flex;
+    flex-direction: column;
 }
 .main_search {
   text-align: left;
   outline: none;
+  margin-left: 170px;
+  margin-right: 170px;
   width: 550px;
   height: 45px;
   border: 1px solid;
   border-color: rgb(206, 206, 206);
   border-radius: 25px;
 }
-.main_search[type=text] {
+.main_search[type="text"] {
   font-size: 18px;
   padding-left: 15px;
 }
@@ -159,16 +147,124 @@ font-size: 40px;
   height: 40px;
   background-color: #5dd8ebf3;
 }
-/* main image */
+
+/* Main image */
 .main_image {
-  padding-top: 50px;
+  padding-top: 40px;
   padding-bottom: 23px;
   width: 320px;
   margin-left: auto;
   margin-right: auto;
 }
-/* main page body */
+
+/* Main page */
+.quiz_questions {
+  border: solid 1px;
+  border-color: rgb(206, 206, 206);
+  width: 900px;
+  margin-top: 30px;
+  border-radius: 3px;
+  display: flex;
+  justify-content: space-between;
+  align-items: left;
+  flex-direction: column;
+}
+
+.quiz_body {
+  margin-right: 2em;
+  display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+.quiz_head {
+  margin-right: 2em;
+  margin-bottom: -10px;
+  display: flex;
+    flex-direction: row;
+    justify-content: left;
+    align-items: left;
+}
+.quiz_head li {
+  font-size: 18px;
+  padding-right: 191px;
+}
+.quiz_questions li,
+button {
+  font-size: 18px;
+  list-style: none;
+  margin: 10px 10px;
+}
+.quiz_questions button {
+  list-style: none;
+  border: none;
+  border-radius: 3px;
+  color: black;
+  padding: 10px;
+  margin: 10px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 18px;
+  width: 120px;
+  height: 40px;
+  background-color: #5dd8ebf3;
+}
+.quiz_questions button:hover {
+  box-shadow: 1px 3px #d6d5d5;
+  border: solid 1px #8a8a8a;
+  border-radius: 3px;
+  color: black;
+  padding: 10px;
+  margin: 10px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 18px;
+  width: 120px;
+  height: 40px;
+  background-color: #5dd8ebf3;
+}
+
+/* arrow */
+.arrow {
+
+  margin-left: auto;
+  margin-right: auto;
+  transform: translate(-50%, -50%);
+}
+.arrow span {
+  display: block;
+  width: 25px;
+  height: 25px;
+  border-bottom: 5px solid #5dd8ebf3;
+  border-right: 5px solid #5dd8ebf3;
+  transform: rotate(45deg);
+  margin: -10px;
+  animation: scroll 2s infinite;
+}
+.arrow span:nth-child(2) {
+  animation-delay: -0.2s;
+}
+.arrow span:nth-child(3) {
+  animation-delay: -0.4s;
+}
+@keyframes scroll {
+  0% {
+    opacity: 1;
+    transform: rotate(45deg) translate(-20px, -20px);
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    transform: rotate(45deg) translate(20px, 20px);
+  }
+}
+/* Main page body */
 .mainbody {
   display: flex;
   flex-direction: column;
+  margin: 100px 100px;
 }

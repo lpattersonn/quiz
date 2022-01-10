@@ -1,6 +1,0 @@
-DROP TABLE IF EXISTS question CASCADE;
-CREATE TABLE question (
-id SERIAL PRIMARY KEY,
-question TEXT NOT NULL,
-answer TEXT NOT NULL,
-);
