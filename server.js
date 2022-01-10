@@ -46,7 +46,7 @@ app.use("/api/widgets", widgetsRoutes(db));
 // Homepage receive all quiz routes
 app.use("/", allQuizRoutes(db));
 // Create quiz page
-app.use("/createquiz", createQuiz(db))
+app.use("/createquiz", createQuiz(db));
 
 app.listen(PORT, () => {
   console.log(`Example app listening on port ${PORT}`);
