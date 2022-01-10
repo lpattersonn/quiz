@@ -7,7 +7,7 @@ const router  = express.Router();
 
 module.exports = (db) => {
   router.get("/", (req, res) => {
-    db.query(`SELECT * FROM quizzes;`)
+    db.query(`SELECT * FROM quizzes WHERE quizzes.public = TRUE;`)
       .then(data => {
         const quizzes = data;
         console.log(quizzes);
