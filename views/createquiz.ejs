@@ -13,15 +13,16 @@
   <header>
     <!-- Nav -->
     <section class="nav_logo">
-      <h1>Quizlett</h1>
+      <h1><a href="http://localhost:8080/">Quizlett</a></h1>
     </section>
     <section>
       <nav>
           <ul class="nav_links">
-           <li><a href="#">Create Quiz</a></li>
-           <li><a href="#">Start Quiz</a></li>
-           <li><a href="#">My Quiz</a></li>
-           <li><a href="#">Logout</a></li>
+            <li><a href="http://localhost:8080/">Home</a></li>
+            <li><a href="http://localhost:8080/createquiz">Create Quiz</a></li>
+            <li><a href="#">Start Quiz</a></li>
+            <li><a href="#">My Quiz</a></li>
+            <li><a href="#">Logout</a></li>
           </ul>
         </nav>
       </section>
@@ -31,59 +32,15 @@
 
 
     <form>
-      <section>
+      <section class="qform">
         <label for="qsubject"><b>Quiz Subject:</b></label><br>
         <input type="text" quiz=”” placeholder="Subject"><br>
         <label for="qdiscription"><b>Quiz Description:</b></label><br>
         <input type="text" quiz=”” placeholder="Discription"><br>
         <label for="permissions"><b>Quiz Description:</b></label><br>
         <input type="text" quiz=”” placeholder="Discription"><br>
-        <button class="quiz_btn">Create Quiz</button>
+        <button class="quiz_btn"><a href="http://localhost:8080/createquestion">Create Quiz</a></button></a>
       </section>
     </form>
-
-
-    <!-- <form>
-      <section>
-        <table>
-        <tr>
-          <td> Quiz Subject: </td>
-          <td> <input type=”text” quiz=”” placeholder="Quiz Subject"> </td>
-        </tr>
-        <tr>
-          <td> Quiz Description: </td>
-          <td> <input type=”text” discription=”” placeholder="Quiz Discription"> </td>
-        </tr>
-        <tr>
-          <td> Permissions: </td>
-          <td> <input type=”check” discription=”” placeholder="Permissions"> </td>
-        </tr>
-      </table> -->
-      <!-- <button class="mainpage_quizbutton" type="submit">Start Quiz</button> -->
-      <!-- <button class="quiz_btn" method="POST" action="create_quiz">Create Questions</button>
-    </section>
-
-    </form> -->
-
-    <!-- <form>
-      <table >
-        <div class="quiz_create">
-          <tr>
-          <td>Quiz Subject</td>
-          <input type="text" placeholder="Quiz Subject">
-        </tr>
-        <tr>
-          <td>Quiz Description</td>
-          <input type="text" placeholder="Quiz Subject">
-        </tr>
-        <tr>
-          <td>Permissions</td>
-          <input type="check" placeholder="Public">
-        </tr>
-        <button method="POST" action="create_quiz">Create Questions</button>
-      </div>
-
-      </table>
-    </form> -->
   </body>
 </html>

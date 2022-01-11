@@ -6,19 +6,20 @@
     <link rel="stylesheet" href="/vendor/border-box.css" type="text/css" />
     <link rel="stylesheet" href="/styles/main.css" type="text/css" />
     <link rel="stylesheet" href="/styles/layout.css" type="text/css" />
-    <link rel="stylesheet" href="/styles/create_question.css" type="text/css" />
+    <link rel="stylesheet" href="/styles/createquestion.css" type="text/css" />
     <script type="text/javascript" src="/vendor/jquery-3.0.0.js"></script>
     <script type="text/javascript" src="/scripts/app.js"></script>
   </head>
   <header>
     <!-- Nav -->
     <section class="nav_logo">
-      <h1>Quizlett</h1>
+      <h1><a href="http://localhost:8080/">Quizlett</a></h1>
     </section>
     <section>
       <nav>
           <ul class="nav_links">
-           <li><a href="#">Create Quiz</a></li>
+           <li><a href="http://localhost:8080/">Home</a></li>
+           <li><a href="http://localhost:8080/createquiz">Create Quiz</a></li>
            <li><a href="#">Start Quiz</a></li>
            <li><a href="#">My Quiz</a></li>
            <li><a href="#">Logout</a></li>
@@ -38,24 +39,5 @@
         <button class="create_question">Submit</button>
       </section>
     </form>
-
-
-    <!-- <form>
-      <table>
-        <tr>
-          <td>Quiz Subject</td>
-          <input type="text" placeholder="Quiz Subject">
-        </tr>
-        <tr>
-          <td>Quiz Description</td>
-          <input type="text" placeholder="Quiz Subject">
-        </tr>
-        <tr>
-          <td>Permissions</td>
-          <input type="check" placeholder="Public">
-        </tr>
-        <button method="POST" action="create_quiz">Create Questions</button>
-      </table>
-    </form> -->
   </body>
 </html>
