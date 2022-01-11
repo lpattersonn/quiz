@@ -40,6 +40,7 @@ const widgetsRoutes = require("./routes/widgets");
 const allQuizRoutes = require("./routes/allquiz-router");
 const createQuiz = require("./routes/createquiz-router");
 const createQuestion = require("./routes/createquestion-router");
+const myquiz = require("./routes/myquiz-router");
 
 // Mount all resource route
 app.use("/api/users", usersRoutes(db));
@@ -50,6 +51,9 @@ app.use("/", allQuizRoutes(db));
 app.use("/createquiz", createQuiz(db));
 // Create question
 app.use("/createquestion", createQuestion(db));
+// Create Myquiz page
+app.use("/myquiz", myquiz(db));
+
 
 app.listen(PORT, () => {
   console.log(`Example app listening on port ${PORT}`);

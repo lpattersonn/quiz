@@ -1,0 +1,240 @@
+/* Inports */
+@import url("https://fonts.googleapis.com/css2?family=Bangers&display=swap");
+
+body {
+  font-family: sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: white;
+}
+
+/* nav section */
+header {
+  font-family: sans-serif;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1em;
+}
+
+/* Logo */
+.nav_logo h1 {
+  font-family: "Bangers", sans-serif;
+  font-size: 40px;
+  margin-left: 7px;
+}
+
+/* Nav links */
+.nav_links {
+  color: black;
+  text-decoration: none;
+  font-size: 18px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-direction: row;
+}
+.nav_links li,
+a {
+  text-decoration: none;
+  color: black;
+}
+.nav_links li {
+  padding: 0px 10px;
+  list-style: none;
+}
+
+/* Main page form */
+.main_button {
+  padding-top: 25px;
+  margin-bottom: 65px;
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+}
+.button_arrow {
+  margin-bottom: 30px;
+  display: flex;
+    flex-direction: column;
+}
+.main_search {
+  text-align: left;
+  outline: none;
+  margin-left: 170px;
+  margin-right: 170px;
+  width: 550px;
+  height: 45px;
+  border: 1px solid;
+  border-color: rgb(206, 206, 206);
+  border-radius: 25px;
+}
+.main_search[type="text"] {
+  font-size: 18px;
+  padding-left: 15px;
+}
+.main_search:hover {
+  box-shadow: 1px 3px #d6d5d5;
+  outline: none;
+  border: solid 1px;
+  text-align: left;
+  width: 550px;
+  height: 45px;
+  border: 1px solid;
+  border-color: #8a8a8a;
+  border-radius: 25px;
+}
+.search_button {
+  border: none;
+  border-radius: 3px;
+  color: black;
+  padding: 10px;
+  margin: 10px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 18px;
+  width: 120px;
+  height: 40px;
+  background-color: #5dd8ebf3;
+}
+.search_button:hover {
+  box-shadow: 1px 3px #d6d5d5;
+  border: solid 1px #8a8a8a;
+  border-radius: 3px;
+  color: black;
+  padding: 10px;
+  margin: 10px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 18px;
+  width: 120px;
+  height: 40px;
+  background-color: #5dd8ebf3;
+}
+.mainpage_quizbutton {
+  border: none;
+  border-radius: 3px;
+  color: black;
+  padding: 10px;
+  margin: 10px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 18px;
+  width: 120px;
+  height: 40px;
+  background-color: #5dd8ebf3;
+}
+
+.mainpage_quizbutton:hover {
+  box-shadow: 1px 3px #d6d5d5;
+  border: solid 1px #8a8a8a;
+  border-radius: 3px;
+  color: black;
+  padding: 10px;
+  margin: 10px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 18px;
+  width: 120px;
+  height: 40px;
+  background-color: #5dd8ebf3;
+}
+
+/* Main image */
+.main_image {
+  padding-top: 40px;
+  padding-bottom: 23px;
+  width: 320px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Main page */
+.quiz_questions {
+  border: solid 1px;
+  border-color: rgb(206, 206, 206);
+  width: 900px;
+  margin-top: 30px;
+  border-radius: 3px;
+  display: flex;
+  justify-content: space-between;
+  align-items: left;
+  flex-direction: column;
+}
+
+.quiz_body {
+  margin-right: 2em;
+  display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+.quiz_head {
+  margin-right: 2em;
+  margin-bottom: -10px;
+  display: flex;
+    flex-direction: row;
+    justify-content: left;
+    align-items: left;
+}
+.quiz_head li {
+  font-size: 18px;
+  padding-right: 191px;
+}
+.quiz_questions li,
+button {
+  font-size: 18px;
+  list-style: none;
+  margin: 10px 10px;
+}
+.quiz_questions button {
+  list-style: none;
+  border: none;
+  border-radius: 3px;
+  color: black;
+  padding: 10px;
+  margin: 10px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 18px;
+  width: 120px;
+  height: 40px;
+  background-color: #5dd8ebf3;
+}
+.quiz_questions button:hover {
+  box-shadow: 1px 3px #d6d5d5;
+  border: solid 1px #8a8a8a;
+  border-radius: 3px;
+  color: black;
+  padding: 10px;
+  margin: 10px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 18px;
+  width: 120px;
+  height: 40px;
+  background-color: #5dd8ebf3;
+}
+
+
+/* Main page body */
+.mainbody {
+  display: flex;
+  flex-direction: column;
+  margin: 100px 100px;
+}
+
+.quiz_list {
+  display: flex;
+  flex-direction: column;
+}

@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -6,7 +7,6 @@
     <link rel="stylesheet" href="/vendor/border-box.css" type="text/css" />
     <link rel="stylesheet" href="/styles/main.css" type="text/css" />
     <link rel="stylesheet" href="/styles/layout.css" type="text/css" />
-    <link rel="stylesheet" href="/styles/createquestion.css" type="text/css" />
     <script type="text/javascript" src="/vendor/jquery-3.0.0.js"></script>
     <script type="text/javascript" src="/scripts/app.js"></script>
   </head>
@@ -18,8 +18,7 @@
     <section>
       <nav>
           <ul class="nav_links">
-           <li><a href="http://localhost:8080/">Home</a></li>
-           <li><a href="http://localhost:8080/createquiz">Create Quiz</a></li>
+            <li><a href="http://localhost:8080/createquiz">Create Quiz</a></li>
            <li><a href="#">Start Quiz</a></li>
            <li><a href="http://localhost:8080/myquiz">My Quiz</a></li>
            <li><a href="#">Logout</a></li>
@@ -30,14 +29,39 @@
   </header>
   <body>
 
-    <form>
-      <section>
-        <label for="qname"><b>Question #1:</b></label><br>
-        <input type="text" class="question_name" name="fname"><br>
-        <label for="qanswer"><b>Answer:</b></label><br>
-        <input type="text" class="question_name" name="lname">
-        <button class="create_question">Submit Question</button>
-      </section>
-    </form>
+      <article class="quiz_questions">
+        <div>
+        <ul class="quiz_head">
+          <li><b>Subject</b></li>
+          <li><b>Description</b></li>
+        </ul>
+        </div>
+        <div>
+        <ul class="quiz_list">
+          <% if (rows) { %>
+            <% for (let row of rows) { %>
+            <section class="quiz_body">
+              <li><%= row.subject %></li>
+              <li><%= row.description %></li>
+              <button class="article_button" type="submit">Start Quiz</button>
+            </section>
+
+          <% } %>
+          <% } %>
+          </ul>
+          </div>
+      </article>
   </body>
 </html>
+
+
+
+
+
+
+
+
+
+
+
+
