@@ -8,6 +8,14 @@ const express = require("express");
 const app = express();
 const morgan = require("morgan");
 
+// Cookie session
+const cookieSession = require('cookie-session');
+
+app.use(cookieSession({
+  name: 'session',
+  keys: ['key1', 'key2']
+}))
+
 // PG database client/connection setup
 const { Pool } = require("pg");
 const dbParams = require("./lib/db.js");
@@ -41,15 +49,20 @@ const allQuizRoutes = require("./routes/allquiz-router");
 const createQuiz = require("./routes/createquiz-router");
 const createQuestion = require("./routes/createquestion-router");
 const myquiz = require("./routes/myquiz-router");
+
 // Mount all resource route
 app.use("/api/users", usersRoutes(db));
 app.use("/api/widgets", widgetsRoutes(db));
+
 // Homepage receive all quiz routes
 app.use("/", allQuizRoutes(db));
+
 // Create quiz page
 app.use("/createquiz", createQuiz(db));
+
 // Create question
 app.use("/createquestion", createQuestion(db));
+
 // Create Myquiz page
 app.use("/myquiz", myquiz(db));
 
@@ -57,4 +70,13 @@ app.listen(PORT, () => {
   console.log(`Example app listening on port ${PORT}`);
 });
 
+// User cookie session
+app.get('/login/:id', (req, res) => {
+  // cookie-session middleware
+  req.session.user_id = req.params.id;
+  // cookie-parser middleware
+  res.cookie('user_id', req.params.id);
+  // send the user somewhere
+  res.redirect('/');
+ });
 

@@ -5,7 +5,11 @@ const router  = express.Router();
 
 module.exports = (db) => {
   router.get("/", (req, res) => {
-    db.query(`SELECT * FROM quizzes WHERE user_id = 1`)
+    db.query(`
+    SELECT quizzes.subject, quizzes.description
+    FROM quizzes
+    JOIN users ON users.id=user_id
+    WHERE users.id = $1;`, [req.session.user_id])
       .then((data) =>  {
         console.log(data);
         res.render('myquiz', data);
