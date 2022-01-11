@@ -52,6 +52,7 @@ app.use("/createquiz", createQuiz(db));
 app.use("/createquestion", createQuestion(db));
 // Create Myquiz page
 app.use("/myquiz", myquiz(db));
+app.use("/myquiz", myquiz(db));
 
 app.listen(PORT, () => {
   console.log(`Example app listening on port ${PORT}`);
