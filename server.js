@@ -37,20 +37,24 @@ app.use(express.static("public"));
 // Note: Feel free to replace the example routes below with your own
 const usersRoutes = require("./routes/users");
 const widgetsRoutes = require("./routes/widgets");
-const allQuizRoutes = require("./routes/allquiz-router")
-const createQuiz = require("./routes/createquiz-router")
-const createQuestion = require("./routes/createquestion-router")
-
+const allQuizRoutes = require("./routes/allquiz-router");
+const createQuiz = require("./routes/createquiz-router");
+const createQuestion = require("./routes/createquestion-router");
+const myquiz = require("./routes/myquiz-router");
 // Mount all resource route
 app.use("/api/users", usersRoutes(db));
 app.use("/api/widgets", widgetsRoutes(db));
 // Homepage receive all quiz routes
 app.use("/", allQuizRoutes(db));
 // Create quiz page
-app.use("/createquiz", createQuiz(db))
+app.use("/createquiz", createQuiz(db));
 // Create question
-app.use("/createquestion", createQuestion(db))
+app.use("/createquestion", createQuestion(db));
+// Create Myquiz page
+app.use("/myquiz", myquiz(db));
 
 app.listen(PORT, () => {
   console.log(`Example app listening on port ${PORT}`);
 });
+
+
