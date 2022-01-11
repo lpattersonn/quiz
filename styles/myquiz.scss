@@ -169,10 +169,7 @@ a {
   align-items: left;
   flex-direction: column;
 }
-.quiz_list {
-  display: flex;
-  flex-direction: column;
-}
+
 .quiz_body {
   margin-right: 2em;
   display: flex;
@@ -229,44 +226,15 @@ button {
   background-color: #5dd8ebf3;
 }
 
-/* arrow */
-.arrow {
-  margin-left: auto;
-  margin-right: auto;
-  transform: translate(-50%, -50%);
-}
-.arrow span {
-  display: block;
-  width: 25px;
-  height: 25px;
-  border-bottom: 5px solid #5dd8ebf3;
-  border-right: 5px solid #5dd8ebf3;
-  transform: rotate(45deg);
-  margin: -10px;
-  animation: scroll 2s infinite;
-}
-.arrow span:nth-child(2) {
-  animation-delay: -0.2s;
-}
-.arrow span:nth-child(3) {
-  animation-delay: -0.4s;
-}
-@keyframes scroll {
-  0% {
-    opacity: 1;
-    transform: rotate(45deg) translate(-20px, -20px);
-  }
-  50% {
-    opacity: 1;
-  }
-  100% {
-    opacity: 0;
-    transform: rotate(45deg) translate(20px, 20px);
-  }
-}
+
 /* Main page body */
 .mainbody {
   display: flex;
   flex-direction: column;
   margin: 100px 100px;
+}
+
+.quiz_list {
+  display: flex;
+  flex-direction: column;
 }

@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -17,6 +18,7 @@
     <section>
       <nav>
           <ul class="nav_links">
+            <li><a href="http://localhost:8080/">Home</a></li>
             <li><a href="http://localhost:8080/createquiz">Create Quiz</a></li>
             <li><a href="#">Start Quiz</a></li>
             <li><a href="http://localhost:8080/myquiz">My Quiz</a></li>
@@ -27,25 +29,6 @@
     </span>
   </header>
   <body>
-   <div class="mainbody">
-    <img class="main_image" src="https://media.istockphoto.com/vectors/quiz-in-comic-pop-art-style-quiz-brainy-game-word-vector-illustration-vector-id1186386668?k=20&m=1186386668&s=612x612&w=0&h=tUvqWXoNa2OsJ1YsvZwr3JKOggtzfr_KHuopigindPA=" alt="midterm_group_5">
-    <!-- Search Area -->
-    <div class="mainpage_searcharea">
-      <div>
-        <input type="text" placeholder="Search..." class="main_search" name="search">
-      </div>
-    <div class="button_arrow">
-      <div class="main_button">
-        <button class="search_button" type="submit">Search</button>
-        <button class="mainpage_quizbutton" type="submit">Start Quiz</button>
-      </div>
-        <div class="arrow">
-          <span></span>
-          <span></span>
-          <span></span>
-        </div>
-        </div>
-  </div>
       <article class="quiz_questions">
         <div>
         <ul class="quiz_head">
@@ -54,18 +37,30 @@
         </ul>
         </div>
         <div>
-          <ul class="quiz_list">
-            <% if (rows) { %>
-              <% for (let row of rows) { %>
-              <section class="quiz_body">
-                <li><%= row.subject %></li>
-                <li><%= row.description %></li>
-                <button class="article_button" type="submit">Start Quiz</button>
-              </section>
-            <% } %>
-            <% } %>
-            </ul>
+        <ul class="quiz_list">
+          <% if (rows) { %>
+            <% for (let row of rows) { %>
+            <section class="quiz_body">
+              <li><%= row.subject %></li>
+              <li><%= row.description %></li>
+              <button class="article_button" type="submit">Start Quiz</button>
+            </section>
+          <% } %>
+          <% } %>
+          </ul>
           </div>
       </article>
   </body>
 </html>
+
+
+
+
+
+
+
+
+
+
+
+
