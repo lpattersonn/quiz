@@ -1,0 +1,62 @@
+/* Question creation page */
+/* Body */
+body {
+  font-family: sans-serif;
+}
+/* Form */
+form {
+  border: solid 1px;
+  border-color: rgb(206, 206, 206);
+  width: 70%;
+  margin-top: 80px;
+  border-radius: 3px;
+}
+section {
+  margin: 20px;
+  display: flex;
+    flex-direction: column;
+}
+section button {
+  margin: 1em 1em;
+}
+section input {
+  margin: 1em 1em;
+  outline: none;
+  border: solid 1px;
+  border-color: rgb(206, 206, 206);
+  height: 35px;
+}
+label {
+  font-size: 18px;
+  padding-left: 15px;
+}
+.create_question {
+  list-style: none;
+  border: none;
+  border-radius: 3px;
+  color: black;
+  padding: 10px;
+  margin: 10px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 18px;
+  width: 120px;
+  height: 40px;
+  background-color: #5dd8ebf3;
+}
+.create_question:hover {
+  box-shadow: 1px 3px #D6D5D5;
+  border: solid 1px #8A8A8A;
+  border-radius: 3px;
+  color: black;
+  padding: 10px;
+  margin: 10px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 18px;
+  width: 120px;
+  height: 40px;
+  background-color: #5dd8ebf3;
+}

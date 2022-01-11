@@ -6,6 +6,7 @@
     <link rel="stylesheet" href="/vendor/border-box.css" type="text/css" />
     <link rel="stylesheet" href="/styles/main.css" type="text/css" />
     <link rel="stylesheet" href="/styles/layout.css" type="text/css" />
+    <link rel="stylesheet" href="/styles/create_question.css" type="text/css" />
     <script type="text/javascript" src="/vendor/jquery-3.0.0.js"></script>
     <script type="text/javascript" src="/scripts/app.js"></script>
   </head>
@@ -27,7 +28,19 @@
     </span>
   </header>
   <body>
+
     <form>
+      <section>
+        <label for="qname"><b>Question #1:</b></label><br>
+        <input type="text" class="question_name" name="fname"><br>
+        <label for="qanswer"><b>Answer:</b></label><br>
+        <input type="text" class="question_name" name="lname">
+        <button class="create_question">Submit</button>
+      </section>
+    </form>
+
+
+    <!-- <form>
       <table>
         <tr>
           <td>Quiz Subject</td>
@@ -43,6 +56,6 @@
         </tr>
         <button method="POST" action="create_quiz">Create Questions</button>
       </table>
-    </form>
+    </form> -->
   </body>
 </html>
