@@ -24,6 +24,7 @@ section button {
 section input {
   margin: 1em 1em;
   outline: none;
+  border-radius: 3px;
   border: solid 1px;
   border-color: rgb(206, 206, 206);
   height: 35px;
@@ -43,7 +44,7 @@ label {
   text-decoration: none;
   display: inline-block;
   font-size: 18px;
-  width: 120px;
+  width: 170px;
   height: 40px;
   background-color: #5dd8ebf3;
 }
@@ -58,7 +59,7 @@ label {
   text-decoration: none;
   display: inline-block;
   font-size: 18px;
-  width: 120px;
+  width: 170px;
   height: 40px;
   background-color: #5dd8ebf3;
 }
