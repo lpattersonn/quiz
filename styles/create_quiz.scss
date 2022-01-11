@@ -17,6 +17,9 @@ form input {
   outline: none;
   width: 95%;
   height: 35px;
+  border: solid 1px;
+  border-radius: 3px;
+  border-color: rgb(206, 206, 206);
   margin-left: 1em;
   margin-right: 1em;
 }
