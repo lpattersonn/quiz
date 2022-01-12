@@ -31,10 +31,11 @@
   <body>
     <form>
       <section>
-        <label for="qname"><b>Question #1:</b></label><br>
-        <input type="text" class="question_name" name="fname"><br>
-        <label for="qanswer"><b>Answer:</b></label><br>
-        <input type="text" class="question_name" name="lname">
+        <div id="counter"><h1 class="text"> Question #</h1><h1 id="value"> 1 </h1></div>
+        <label for="qname"><b>Question</b></label>
+        <input type="text" class="question_name" name=question>
+        <label for="qanswer"><b>Answer</b></label>
+        <input type="text" class="question_name" name=answer>
         <button class="create_question">Submit Question</button>
       </section>
     </form>

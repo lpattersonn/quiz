@@ -1,4 +1,6 @@
 /* Question creation page */
+/* Inports */
+@import url("https://fonts.googleapis.com/css2?family=Bangers&display=swap");
 
 /* Body */
 body {
@@ -28,6 +30,15 @@ section input {
   border-radius: 3px;
   border: solid 1px;
   border-color: rgb(206, 206, 206);
+  height: 35px;
+}
+section input:hover {
+  box-shadow: 1px 3px #d6d5d5;
+  margin: 1em 1em;
+  outline: none;
+  border-radius: 3px;
+  border: solid 1px;
+  border-color: #8a8a8a;
   height: 35px;
 }
 label {
@@ -64,4 +75,23 @@ label {
   height: 40px;
   background-color: #5dd8ebf3;
 }
-
+#counter {
+  margin-left: 1em;
+  margin-right: 1em;
+  margin-bottom: 10px;
+  display: flex;
+    justify-content: left;
+    flex-direction: row;
+    align-items: center;
+}
+#counter .text {
+  font-family: "Bangers", sans-serif;
+  font-size: 25px;
+}
+#value {
+  font-family: "Bangers", sans-serif;
+  margin-left: 7px;
+  font-size: 30px;
+  border-color: solid 5px;
+  color: #5dd8ebf3;
+}
