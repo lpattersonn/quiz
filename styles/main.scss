@@ -169,7 +169,10 @@ a {
   align-items: left;
   flex-direction: column;
 }
-
+.quiz_list {
+  display: flex;
+  flex-direction: column;
+}
 .quiz_body {
   margin-right: 2em;
   display: flex;
