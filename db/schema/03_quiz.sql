@@ -4,5 +4,5 @@ CREATE TABLE quizzes (
   user_id INTEGER REFERENCES users(id),
   subject VARCHAR (255) NOT NULL,
   description VARCHAR (255) NOT NULL,
-  public BOOLEAN DEFAULT FALSE
+  public BOOLEAN DEFAULT TRUE
 );

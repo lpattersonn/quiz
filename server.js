@@ -8,6 +8,15 @@ const express = require("express");
 const app = express();
 const morgan = require("morgan");
 
+// Body parser
+const bodyParser = require('body-parser')
+
+// parse application/x-www-form-urlencoded
+app.use(bodyParser.urlencoded({ extended: false }))
+
+// parse application/json
+app.use(bodyParser.json())
+
 // Cookie session
 const cookieSession = require('cookie-session');
 
@@ -49,6 +58,7 @@ const allQuizRoutes = require("./routes/allquiz-router");
 const createQuiz = require("./routes/createquiz-router");
 const createQuestion = require("./routes/createquestion-router");
 const myquiz = require("./routes/myquiz-router");
+const createQuizForm = require("./routes/createquiz_form-router");
 
 // Mount all resource route
 app.use("/api/users", usersRoutes(db));
@@ -65,7 +75,9 @@ app.use("/createquestion", createQuestion(db));
 
 // Create Myquiz page
 app.use("/myquiz", myquiz(db));
-app.use("/myquiz", myquiz(db));
+
+// Create Myquiz page
+app.use("/createquizform", createQuizForm(db));
 
 app.listen(PORT, () => {
   console.log(`Example app listening on port ${PORT}`);
