@@ -3,13 +3,18 @@
 
 body {
   font-family: sans-serif;
+  margin-top: 400px;
+  margin-bottom: 200px;
+  width: 100%;
   display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 100vh;
+    justify-content: center;
+    align-items: center;
   background-color: white;
 }
-
+body form {
+  margin-top: 400px;
+  margin-bottom: 400px;
+}
 /* nav section */
 header {
   font-family: sans-serif;
@@ -162,7 +167,8 @@ a {
   border: solid 1px;
   border-color: rgb(206, 206, 206);
   width: 900px;
-  margin-top: 30px;
+  margin-top: 210px;
+  margin-bottom: 200px;
   border-radius: 3px;
   display: flex;
   justify-content: space-between;

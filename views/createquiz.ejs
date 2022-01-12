@@ -13,7 +13,7 @@
   <header>
     <!-- Nav -->
     <section class="nav_logo">
-      <h1><a href="http://localhost:8080/">Quizlett</a></h1>
+      <h1><a href="http://localhost:8080/">Quiz!</a></h1>
     </section>
     <section>
       <nav>
@@ -29,12 +29,12 @@
     </span>
   </header>
   <body>
-    <form method="GET" action="/createquestion">
+    <form method="post" action="/createquestion">
       <section class="qform">
         <label for="qsubject" class="qsubject"><b>Quiz Subject:</b></label><br>
-        <input type="text" name=”subject” class="qsubject_qdiscription"><br>
+        <input type="text" name=subject class="qsubject_qdiscription"><br>
         <label for="qdiscription" class="qdiscription"><b>Quiz Description:</b></label><br>
-        <input type="text" name=”discription” class="qsubject_qdiscription"><br>
+        <input type="text" name=description class="qsubject_qdiscription"><br>
         <label for="permissions"><b>Create A Public Or Private Quiz:</b></label><br>
         <section id="radio_button">
           <label for="public">Public</label><br>
@@ -42,7 +42,7 @@
            <label for="private">Private</label><br>
           <input type="radio" id="private" name="public_private" value=FALSE>
         </section>
-        <button class="quiz_btn" type="submit" value="Submit">Create Quiz</button></a>
+        <button class="quiz_btn" type="submit" value="Submit">Create Quiz</button>
       </section>
     </form>
   </body>

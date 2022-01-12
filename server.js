@@ -12,10 +12,10 @@ const morgan = require("morgan");
 const bodyParser = require('body-parser')
 
 // parse application/x-www-form-urlencoded
-app.use(bodyParser.urlencoded({ extended: true }))
+const urlencodedParser = bodyParser.urlencoded({ extended: false })
 
 // parse application/json
-app.use(bodyParser.json())
+app.use(bodyParser.json());
 
 // Cookie session
 const cookieSession = require('cookie-session');
@@ -56,7 +56,6 @@ const usersRoutes = require("./routes/users");
 const widgetsRoutes = require("./routes/widgets");
 const allQuizRoutes = require("./routes/allquiz-router");
 const createQuiz = require("./routes/createquiz-router");
-const createQuestion = require("./routes/createquestion-router");
 const myquiz = require("./routes/myquiz-router");
 const createQuizForm = require("./routes/createquiz_form-router");
 
@@ -70,14 +69,11 @@ app.use("/", allQuizRoutes(db));
 // Create quiz page
 app.use("/createquiz", createQuiz(db));
 
-// Create question
-app.use("/createquestion", createQuestion(db));
-
 // Create Myquiz page
 app.use("/myquiz", myquiz(db));
 
-// Create Myquiz page
-app.use("/createquizform", createQuizForm(db));
+// Create question
+app.use("/createquestion", urlencodedParser, createQuizForm(db));
 
 app.listen(PORT, () => {
   console.log(`Example app listening on port ${PORT}`);

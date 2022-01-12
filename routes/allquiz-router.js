@@ -10,7 +10,6 @@ module.exports = (db) => {
     db.query(`SELECT * FROM quizzes WHERE quizzes.public = TRUE;`)
       .then(data => {
         const quizzes = data;
-        console.log(quizzes);
         res.render('index', quizzes);
       })
       .catch(err => {

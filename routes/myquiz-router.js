@@ -11,7 +11,6 @@ module.exports = (db) => {
     JOIN users ON users.id=user_id
     WHERE users.id = $1;`, [req.session.user_id])
       .then((data) =>  {
-        console.log(data);
         res.render('myquiz', data);
       })
       .catch(err => {
