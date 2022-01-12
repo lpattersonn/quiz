@@ -29,15 +29,20 @@
     </span>
   </header>
   <body>
-    <form>
+    <form method="POST">
       <section class="qform">
-        <label for="qsubject"><b>Quiz Subject:</b></label><br>
-        <input type="text" name=”create_subject”><br>
-        <label for="qdiscription"><b>Quiz Description:</b></label><br>
-        <input type="text" quiz=”create_description”><br>
+        <label for="qsubject" class="qsubject"><b>Quiz Subject:</b></label><br>
+        <input type="text" name=”qsubject” class="qsubject_qdiscription"><br>
+        <label for="qdiscription" class="qdiscription"><b>Quiz Description:</b></label><br>
+        <input type="text" name=”qdiscription” class="qsubject_qdiscription"><br>
         <label for="permissions"><b>Create A Public Or Private Quiz:</b></label><br>
-        <input type="text" quiz=”create_permission”><br>
-        <button class="quiz_btn"><a href="http://localhost:8080/createquestion">Create Quiz</a></button></a>
+        <section id="radio_button">
+          <label for="public">Public</label><br>
+          <input type="radio" id="public" name="public-private" value=TRUE>
+           <label for="private">Private</label><br>
+          <input type="radio" id="private" name="public-private" value=FALSE>
+        </section>
+        <button class="quiz_btn" type="submit" value="Submit"><a href="http://localhost:8080/createquestion">Create Quiz</a></button></a>
       </section>
     </form>
   </body>

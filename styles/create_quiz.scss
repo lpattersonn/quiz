@@ -3,6 +3,9 @@
 body {
   font-family: sans-serif;
   font-size: 18px;
+  display: flex;
+    justify-content: center;
+    align-items: center;
 }
 /* Form */
 form {
@@ -13,7 +16,7 @@ form {
   margin-bottom: 130px;
   border-radius: 3px;
 }
-form input {
+.qsubject_qdiscription {
   outline: none;
   width: 95%;
   height: 35px;
@@ -23,17 +26,41 @@ form input {
   margin-left: 1em;
   margin-right: 1em;
 }
+.qsubject_qdiscription:hover {
+  box-shadow: 1px 3px #d6d5d5;
+  outline: none;
+  border: solid 1px;
+  width: 95%;
+  height: 35px;
+  border: 1px solid;
+  border-color: #8a8a8a;
+  border-radius: 3px;
+}
 .qform {
-  margin: 20px;
+  margin: 1em 1em;
   display: flex;
     flex-direction: column;
 }
-section input, button {
-  margin: 1em 1em;
-}
+
 label {
   font-size: 18px;
   padding-left: 15px;
+}
+#radio_button {
+  margin-bottom: 15px;
+  display: flex;
+    flex-direction: row;
+    justify-content: left;
+}
+#radio_button input[type="radio"] {
+  border: 0px;
+  width: 50px;
+  height: 21px;
+  accent-color: black;
+}
+#radio_button input label {
+  display: flex;
+    align-items: center;
 }
 .quiz_btn {
   list-style: none;
