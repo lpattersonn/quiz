@@ -58,6 +58,7 @@ const allQuizRoutes = require("./routes/allquiz-router");
 const createQuiz = require("./routes/createquiz-router");
 const myquiz = require("./routes/myquiz-router");
 const createQuizForm = require("./routes/createquiz_form-router");
+const searchRoutes = require("./routes/searchresults");
 
 // Mount all resource route
 app.use("/api/users", usersRoutes(db));
@@ -71,6 +72,9 @@ app.use("/createquiz", createQuiz(db));
 
 // Create Myquiz page
 app.use("/myquiz", myquiz(db));
+
+// Create Search Results page
+app.use("/searchresults", searchRoutes(db));
 
 // Create question
 app.use("/createquestion", urlencodedParser, createQuizForm(db));
@@ -88,4 +92,5 @@ app.get('/login/:id', (req, res) => {
   // send the user somewhere
   res.redirect('/');
  });
+
 
