@@ -59,6 +59,7 @@ const createQuiz = require("./routes/createquiz-router");
 const myquiz = require("./routes/myquiz-router");
 const createQuizForm = require("./routes/createquiz_form-router");
 const searchRoutes = require("./routes/searchresults");
+const createQuestionForm = require("./routes/createquestion-router");
 
 // Mount all resource route
 app.use("/api/users", usersRoutes(db));
@@ -67,17 +68,20 @@ app.use("/api/widgets", widgetsRoutes(db));
 // Homepage receive all quiz routes
 app.use("/", allQuizRoutes(db));
 
+// Create Myquiz page
+app.use("/myquiz", myquiz(db));
+
 // Create quiz page
 app.use("/createquiz", createQuiz(db));
 
-// Create Myquiz page
-app.use("/myquiz", myquiz(db));
+// Create quiz post
+app.use("/quiz", urlencodedParser, createQuizForm(db));
 
 // Create Search Results page
 app.use("/searchresults", searchRoutes(db));
 
 // Create question
-app.use("/createquestion", urlencodedParser, createQuizForm(db));
+app.use("/newquestion", urlencodedParser, createQuestionForm(db));
 
 app.listen(PORT, () => {
   console.log(`Example app listening on port ${PORT}`);
