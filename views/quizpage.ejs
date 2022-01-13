@@ -33,10 +33,10 @@
         <div>
           <% if(rows.length>1) { %>
 
-          <div>
+          <div class="welcome">
             <b>Welcome to the </b> <%= rows[0].subject %> Quiz
           </div>
-          <div>
+          <div class="welcome">
             <b>Quiz Description </b> <%= rows[0].description %>
           </div>
 
@@ -66,15 +66,18 @@
           
             <br>  
             <% } %>
-            <input id="finish-quiz" type="submit" value="Submit">
+            <button  id="finish-quiz" type="submit" > Submit </button>
           </form>
           <div id="myPopup" class="modal">
 
             <!-- Popupt -->
             <div class="popup-content">
               <span class="close">&times;</span>
-              <p>Some text i</p>
-              <button> <a href="/results"> Results Link</a> </button>
+              <p>Congratulations, you've gotten 4/4!</p>
+              <p> Click the SHARE button to share results with a friend!
+                 
+              </p>
+              <button> <a href="/results"> SHARE </a> </button>
             </div>
           
           </div>

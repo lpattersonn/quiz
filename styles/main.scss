@@ -159,9 +159,11 @@ a {
 
 /* Main page */
 .quiz_questions {
-  border: solid 1px;
+  border: solid 2px;
   border-color: rgb(206, 206, 206);
   width: 900px;
+  padding: 3%;
+  font-size: 20px;
   margin-top: 30px;
   margin-bottom: 100px;
   border-radius: 3px;
@@ -316,4 +318,28 @@ button {
   color: #000;
   text-decoration: none;
   cursor: pointer;
+}
+.welcome{
+  font-size: 30px;
+}
+.popup-content{
+  background-color: #fefefe;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+}
+.resultsmain{
+  font-family: "Bangers", sans-serif;
+  font-size: 30px;
+  padding: 20px;
+  width: 100%;
+}
+
+.resultsmain2{
+  font-family: "Bangers", sans-serif;
+  font-size: 30px;
+  padding: 20px;
+  width: 100%;
+  text-align: center;
 }
