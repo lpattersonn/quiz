@@ -8,8 +8,8 @@ module.exports = (db) => {
     db.query(
       `
         INSERT INTO quizzes (user_id, subject, description, public)
-        VALUES ($1, $2, $3, $4);
-        `,
+        VALUES ($1, $2, $3, $4)
+        RETURNING *;`,
       [
         req.session.user_id,
         req.body.subject,
@@ -18,9 +18,12 @@ module.exports = (db) => {
       ]
     )
       .then((body) => {
-        console.log(req.body)
-       res.render("createquestion")
-       })
+        console.log(body.rows[0]);
+        res.render("createquestion", body.rows[0]);
+      })
+      .catch((err) => {
+        res.status(500).json({ error: err.message });
+      });
   });
   return router;
 };

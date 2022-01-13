@@ -41,27 +41,9 @@
           <% if (rows) { %>
             <% for (let row of rows) { %>
             <section class="quiz_body">
-              <div> <li><%= row.subject %></li></div>
-              <div><li><%= row.description %></li></div>
-
-              <!-- <li><%= row.quizid %></li> -->
-              <div><% if (row.public) { %>
-                <section>
-                  <div class="radio_button">
-                  <button class="pupr_button" type="button" id="ajaxBtn" value=<%= [row.public, row.quizid] %>>Public</button>
-                </div>
-                </section>
-
-                  <%  } else { %>
-                    <section>
-                      <div class="radio_button1">
-                        <button class="pupr_button" type="button" id="ajaxBtn1" value=<%= [row.public, row.quizid] %>>Private</button>
-                      </div>                   
-                </section>
-                <% } %></div>
-              <div><button class="article_button" type="submit">Start Quiz</button></div>
-
-
+              <li><%= row.subject %></li>
+              <li><%= row.description %></li>
+              <button class="article_button" type="submit">Start Quiz</button>
             </section>
           <% } %>
           <% } %>
