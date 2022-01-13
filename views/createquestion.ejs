@@ -2,13 +2,13 @@
 <html lang="en">
   <head>
     <title>Quizlett</title>
+    <script type="text/javascript" src="/vendor/jquery-3.0.0.js"></script>
+    <script type="text/javascript" src="/scripts/questionvaluechanger.js"></script>
     <link rel="stylesheet" href="/vendor/normalize-4.1.1.css" type="text/css" />
     <link rel="stylesheet" href="/vendor/border-box.css" type="text/css" />
     <link rel="stylesheet" href="/styles/main.css" type="text/css" />
     <link rel="stylesheet" href="/styles/layout.css" type="text/css" />
     <link rel="stylesheet" href="/styles/createquestion.css" type="text/css" />
-    <script type="text/javascript" src="/vendor/jquery-3.0.0.js"></script>
-    <script type="text/javascript" src="/scripts/app.js"></script>
   </head>
   <header>
     <!-- Nav -->
@@ -29,16 +29,31 @@
     </span>
   </header>
   <body>
-    <form method="POST" action="/newquestion">
+      <% if (questionTotal < 5) { %>
+        <form method="POST" action="/newquestion">
       <section>
-        <div id="counter"><h1 class="text"> Question #</h1><h1 id="value"> 1 </h1></div>
+        <div id="counter"><h1 class="text"> Question #</h1><h1 id="value">
+        <% if (questionTotal < 5) { %>
+          <%=  questionTotal + 1 %>
+        <% } %>
+        </h1></div>
         <label for="question"><b>Question </b></label>
         <input type="hidden" name="quizid" value="<%= id %>">
-        <input type="text" class="question_name" name="question">
+        <input type="text"class="question_name" name="question">
         <label for="answer"><b>Answer</b></label>
         <input type="text" class="question_name" name="answer">
         <button class="create_question" type="submit" value="Submit">Submit Question</button>
+        <button class="create_reset" type="reset" style="display:none;" >Submit Question</button>
       </section>
     </form>
+      <% } %>
+    <% if (questionTotal === 5) { %>
+      <form method="GET" action="/myquiz">
+      <section>
+        <h1>Thak you for completing your quiz!</h1>
+        <button class="create_question" type="submit" value="Submit">See My Quiz</button>
+      </section>
+    </form>
+      <% } %>
   </body>
 </html>
