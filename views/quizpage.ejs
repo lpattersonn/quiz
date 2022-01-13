@@ -51,7 +51,7 @@
           <%= item.answer1 %>
         </input>
           <!--   <label ><%= item.answer1 %></label><br> -->
-            <input type="radio"  name=<%= item.id %> value=<%=item.answer2%>>
+            <input type="radio"  name=<%= item.id %> >
          <%= item.answer2 %>
             </input>
           <!--   <label for="css"><%= item.answer2 %></label><br> -->
@@ -68,11 +68,35 @@
             <% } %>
             <input id="finish-quiz" type="submit" value="Submit">
           </form>
+          <div id="myPopup" class="modal">
 
+            <!-- Popupt -->
+            <div class="popup-content">
+              <span class="close">&times;</span>
+              <p>Some text i</p>
+              <button> <a href="/results"> Results Link</a> </button>
+            </div>
+          
+          </div>
       
 
       </article>
       <% } %>
   </body>
 </html>
+<script>
+  document.getElementById('finish-quiz').onclick = function () {
+    event.preventDefault();
+    // alert("You've submitted the quiz, you got 4/5 correct")
+    //create a  popup
+    var modal = document.getElementById("myPopup");
+    modal.style.display = "block";
+
+    // Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+span.onclick = function() {
+  modal.style.display = "none";
+}
+  }
+  </script>
 
