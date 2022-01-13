@@ -8,7 +8,6 @@
     <link rel="stylesheet" href="/styles/layout.css" type="text/css" />
     <script type="text/javascript" src="/vendor/jquery-3.0.0.js"></script>
     <script type="text/javascript" src="/scripts/app.js"></script>
-
   </head>
   <header>
     <!-- Nav -->
@@ -30,23 +29,6 @@
   <body>
    <div class="mainbody">
     <img class="main_image" src="https://media.istockphoto.com/vectors/quiz-in-comic-pop-art-style-quiz-brainy-game-word-vector-illustration-vector-id1186386668?k=20&m=1186386668&s=612x612&w=0&h=tUvqWXoNa2OsJ1YsvZwr3JKOggtzfr_KHuopigindPA=" alt="midterm_group_5">
-    <!-- Search Area -->
-    <form class="mainpage_searcharea" action="/searchresults" >
-      <div>
-        <input type="text" placeholder="Search..." class="main_search" name="search">
-      </div>
-    <div class="button_arrow">
-      <div class="main_button">
-        <button class="search_button" type="submit">Search</button>
-        <button class="mainpage_quizbutton" type="submit">Start Quiz</button>
-      </div>
-        <div class="arrow">
-          <span></span>
-          <span></span>
-          <span></span>
-        </div>
-        </div>
-      </form>
       <article class="quiz_questions">
         <div>
         <ul class="quiz_head">
@@ -55,18 +37,13 @@
         </ul>
         </div>
         <div>
-          <!-- <form action="/quizpage" > -->
           <ul class="quiz_list">
             <% if (rows) { %>
               <% for (let row of rows) { %>
               <section class="quiz_body">
-
-                <li id="subject"><%= row.subject %></li>
-                <li id="description"><%= row.description %></li>
-
-                  <button id="startquiz-button" class="article_button" type="submit">Start Quiz</button>
-                <!-- </form> -->
-                <button >Share</button>
+                <li><%= row.subject %></li>
+                <li><%= row.description %></li>
+                <button class="article_button" type="submit">Start Quiz</button>
               </section>
             <% } %>
             <% } %>
@@ -75,9 +52,3 @@
       </article>
   </body>
 </html>
-<script>
-  document.getElementById("startquiz-button").onclick = function (){
-    location.href = `/quizpage/?subject=${document.getElementById('subject').innerHTML}&description=${document.getElementById('description').innerHTML}`
-  }
-
-</script>

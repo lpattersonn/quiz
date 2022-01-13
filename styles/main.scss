@@ -5,7 +5,7 @@ body {
   font-family: sans-serif;
   display: flex;
   justify-content: center;
-  align-items: center;
+  // align-items: center;
   min-height: 100vh;
   background-color: white;
 }
@@ -159,9 +159,11 @@ a {
 
 /* Main page */
 .quiz_questions {
-  border: solid 1px;
+  border: solid 2px;
   border-color: rgb(206, 206, 206);
   width: 900px;
+  padding: 3%;
+  font-size: 20px;
   margin-top: 30px;
   border-radius: 3px;
   display: flex;
@@ -175,6 +177,14 @@ a {
 }
 .quiz_body {
   margin-right: 2em;
+  display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+.quiz_body input{
+  margin-right: 2em;
+  padding-right: 191px;
   display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -197,6 +207,7 @@ button {
   font-size: 18px;
   list-style: none;
   margin: 10px 10px;
+  width: 30%;
 }
 .quiz_questions button {
   list-style: none;
@@ -213,6 +224,7 @@ button {
   height: 40px;
   background-color: #5dd8ebf3;
 }
+
 .quiz_questions button:hover {
   box-shadow: 1px 3px #d6d5d5;
   border: solid 1px #8a8a8a;
@@ -269,4 +281,63 @@ button {
   display: flex;
   flex-direction: column;
   margin: 100px 100px;
+}
+.modal {
+  display: none;
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+/* Modal Content */
+.popup-content {
+  background-color: #fefefe;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+}
+/* The Close Button */
+.close {
+  color: #aaaaaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+.welcome{
+  font-size: 30px;
+}
+.popup-content{
+  background-color: #fefefe;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+}
+.resultsmain{
+  font-family: "Bangers", sans-serif;
+  font-size: 30px;
+  padding: 20px;
+  width: 100%;
+}
+
+.resultsmain2{
+  font-family: "Bangers", sans-serif;
+  font-size: 30px;
+  padding: 20px;
+  width: 100%;
+  text-align: center;
 }
