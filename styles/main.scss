@@ -182,6 +182,14 @@ a {
     justify-content: space-between;
     align-items: center;
 }
+.quiz_body input{
+  margin-right: 2em;
+  padding-right: 191px;
+  display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
 .quiz_head {
   margin-right: 2em;
   margin-bottom: -10px;
@@ -216,6 +224,7 @@ button {
   height: 40px;
   background-color: #5dd8ebf3;
 }
+
 .quiz_questions button:hover {
   box-shadow: 1px 3px #d6d5d5;
   border: solid 1px #8a8a8a;

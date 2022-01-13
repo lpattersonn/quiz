@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Quizlett</title>
+    <link rel="stylesheet" href="/vendor/normalize-4.1.1.css" type="text/css" />
+    <link rel="stylesheet" href="/vendor/border-box.css" type="text/css" />
+    <link rel="stylesheet" href="/styles/main.css" type="text/css" />
+    <link rel="stylesheet" href="/styles/layout.css" type="text/css" />
+    <script type="text/javascript" src="/vendor/jquery-3.0.0.js"></script>
+    <script type="text/javascript" src="/scripts/app.js"></script>
+  </head>
+  <header>
+    <!-- Nav -->
+    <section class="nav_logo">
+      <h1><a href="http://localhost:8080/">Quiz!</a></h1>
+    </section>
+    <section>
+      <nav>
+          <ul class="nav_links">
+            <li><a href="http://localhost:8080/createquiz">Create Quiz</a></li>
+            <li><a href="#">Start Quiz</a></li>
+            <li><a href="http://localhost:8080/myquiz">My Quiz</a></li>
+            <li><a href="#">Logout</a></li>
+          </ul>
+        </nav>
+      </section>
+    </span>
+  </header>
+  <body>
+   <div class="mainbody">
+    <img class="main_image" src="https://media.istockphoto.com/vectors/quiz-in-comic-pop-art-style-quiz-brainy-game-word-vector-illustration-vector-id1186386668?k=20&m=1186386668&s=612x612&w=0&h=tUvqWXoNa2OsJ1YsvZwr3JKOggtzfr_KHuopigindPA=" alt="midterm_group_5">
+      <article>
+        <div>
+          <% if(rows.length>1) { %>
+
+          <div>
+            <b>Welcome to the </b> <%= rows[0].subject %> Quiz
+          </div>
+          <div>
+            <b>Quiz Description </b> <%= rows[0].description %>
+          </div>
+
+        </div>
+      </article>
+      <article class=quiz_questions>
+        
+          <form >
+            <% for (let item of rows) { %>
+            <p>Question Number <%= item.id %>: <%=item.question%></p>
+            <input type="radio"  name=<%= item.id %>  >
+          <%= item.answer1 %>
+        </input>
+          <!--   <label ><%= item.answer1 %></label><br> -->
+            <input type="radio"  name=<%= item.id %> value=<%=item.answer2%>>
+         <%= item.answer2 %>
+            </input>
+          <!--   <label for="css"><%= item.answer2 %></label><br> -->
+            <input type="radio"  name=<%= item.id %>>
+          <%= item.answer3 %>
+            </input>
+          <!--   <label for="javascript"><%= item.answer3 %></label> -->
+            <input type="radio" name=<%= item.id %> >
+          <%= item.answer4 %>
+          </input>
+          <!--   <label for="javascript"><%= item.answer4 %></label> -->
+          
+            <br>  
+            <% } %>
+            <input id="finish-quiz" type="submit" value="Submit">
+          </form>
+
+      
+
+      </article>
+      <% } %>
+  </body>
+</html>
+

@@ -60,6 +60,7 @@ const myquiz = require("./routes/myquiz-router");
 const createQuizForm = require("./routes/createquiz_form-router");
 const searchRoutes = require("./routes/searchresults");
 const createQuestionForm = require("./routes/createquestion-router");
+const goToQuizPage = require("./routes/gotoquizpage")
 
 // Mount all resource route
 app.use("/api/users", usersRoutes(db));
@@ -76,6 +77,11 @@ app.use("/createquiz", createQuiz(db));
 
 // Create quiz post
 app.use("/quiz", urlencodedParser, createQuizForm(db));
+
+//Go To Quiz Page
+app.use("/quizpage", goToQuizPage(db));
+
+
 
 // Create Search Results page
 app.use("/searchresults", searchRoutes(db));
