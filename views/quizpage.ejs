@@ -37,17 +37,15 @@
       </article>
       <article class=quiz_questions>
 
-          <form >
+          <form method="GET" action="/results">
             <% for (let item of questions) { %>
               <!-- <ul>
                 <li>item.question</li>
               <li>item.question</li>
             </ul> -->
             <div id="counter"><h4 class="text"> Question # </h4><h4 class="valueTwo"></h4></div><p><%= item.question %></p>
-
            <% for (let keys of item.options) { %>
-            <input type="radio"  name="answer" value="<%= item.options %>">
-
+            <input type="radio"  name="<%= item.question %>" value="<%= keys.answer %>">
             <%= keys.answer %>
             <% } %>
             <% } %>
@@ -57,7 +55,7 @@
             <!-- Popupt -->
             <div class="popup-content">
               <span class="close">&times;</span>
-              <p>Congratulations, you've gotten 4/4!</p>
+              <p>Congratulations, you've gotten 5/5!</p>
               <p> Copy the results link to share how you did with a friend!  </p>
               <p> Results URL: <input style="width: 78%;" value="http://localhost:8080/results"> </input>  </p>
             </div>
