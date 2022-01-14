@@ -20,7 +20,6 @@
       <nav>
           <ul class="nav_links">
             <li><a href="http://localhost:8080/createquiz">Create Quiz</a></li>
-            <li><a href="#">Start Quiz</a></li>
             <li><a href="http://localhost:8080/myquiz">My Quiz</a></li>
             <li><a href="#">Logout</a></li>
           </ul>
@@ -66,7 +65,7 @@
                 <li id="description"><%= row.description %></li>
 
                   <button id="startquiz-button" class="article_button" type="submit"><a href="/quizpage/<%= row.id %>" class="article_button">Start Quiz</a></button>
-                  <button id="clipboardlink" class="article_button" type="submit"><a href="http://localhost:8080/quizpage/?subject=Web%20Developement&description=Junior%20developer%20interview%20questions">Share Quiz</a></button>
+                  <button id="clipboardlink" class="clipboardbuttonOne" type="submit"><a href="http://localhost:8080/quizpage/?subject=Web%20Developement&description=Junior%20developer%20interview%20questions">Share Quiz</a></button>
 
               </section>
             <% } %>
