@@ -13,8 +13,15 @@ body {
 .valueTwo::before {
   font-family: "Bangers", sans-serif;
   counter-increment: section;
-  content: counter(section) " ";
+  content: "Question # " counter(section);
   }
+.valueTwo {
+  border-color: black;
+  border-width: 25em;
+  }
+.text {
+  width: 200px;
+}
 /* nav section */
 header {
   font-family: sans-serif;
@@ -325,24 +332,47 @@ button {
 .welcome{
   font-size: 30px;
 }
-.popup-content{
+.popup-content {
   background-color: #fefefe;
   margin: auto;
   padding: 20px;
   border: 1px solid #888;
   width: 80%;
 }
-.resultsmain{
+.resultsmain {
   font-family: "Bangers", sans-serif;
   font-size: 30px;
   padding: 20px;
   width: 100%;
 }
 
-.resultsmain2{
+.resultsmain2 {
   font-family: "Bangers", sans-serif;
   font-size: 30px;
   padding: 20px;
   width: 100%;
   text-align: center;
+}
+.startquizform {
+  display: flex;
+  flex-direction: column;
+}
+.radio_button {
+  margin-bottom: 10px;
+  display: flex;
+    flex-direction: row;
+    justify-content: left;
+    align-items: center;
+}
+.radio_button input[type="radio"] {
+  margin-left: -12px;
+  border: 0px;
+  width: 50px;
+  height: 21px;
+  accent-color: black;
+}
+#finish-quiz {
+  margin-top: 30px;
+  margin-bottom: 20px;
+  margin-left: 4px;
 }

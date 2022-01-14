@@ -43,11 +43,16 @@
                 <li>item.question</li>
               <li>item.question</li>
             </ul> -->
-            <div id="counter"><h4 class="text"> Question # </h4><h4 class="valueTwo"></h4></div><p><%= item.question %></p>
-           <% for (let keys of item.options) { %>
-            <input type="radio"  name="<%= item.question %>" value="<%= keys.answer %>">
-            <%= keys.answer %>
-            <% } %>
+            <div id="counter"><h4 class="text"></h4><h3 class="valueTwo"></h3></div>
+            <p><%= item.question %></p>
+              <% for (let keys of item.options) { %>
+                <div class="startquizform">
+                  <section class="radio_button">
+                <input type="radio"  name="<%= item.question %>" value="<%= keys.answer %>">
+                <%= keys.answer %>
+                  </section>
+                </div>
+              <% } %>
             <% } %>
             <button  id="finish-quiz" type="submit" > Submit </button>
           </form>
@@ -56,8 +61,8 @@
             <div class="popup-content">
               <span class="close">&times;</span>
               <p>Congratulations, you've gotten 5/5!</p>
-              <p> Copy the results link to share how you did with a friend!  </p>
-              <p> Results URL: <input style="width: 78%;" value="http://localhost:8080/results"> </input>  </p>
+              <p>Copy the results link to share how you did with a friend!</p>
+              <p>Results URL: <input style="width: 78%;" value="http://localhost:8080/results"> </input>  </p>
             </div>
           </div>
       </article>
