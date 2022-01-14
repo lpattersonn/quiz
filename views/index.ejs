@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="/styles/layout.css" type="text/css" />
     <script type="text/javascript" src="/vendor/jquery-3.0.0.js"></script>
     <script type="text/javascript" src="/scripts/app.js"></script>
+    <!-- <script type="text/javascript" src="/scripts/clipboard.js"></script> -->
 
   </head>
   <header>
@@ -45,6 +46,7 @@
           <span></span>
           <span></span>
         </div>
+        <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script> <p id="p1">P1: I am paragraph 1</p> <p id="p2">P2: I am a second paragraph</p> <button onclick="copyToClipboard('#p1')">Copy P1</button> <button onclick="copyToClipboard('#p2')">Copy P2</button> <br/><br/><input type="text" placeholder="Paste here for test" /> -->
         </div>
       </form>
       <article class="quiz_questions">
@@ -55,7 +57,6 @@
         </ul>
         </div>
         <div>
-          <!-- <form action="/quizpage" > -->
           <ul class="quiz_list">
             <% if (rows) { %>
               <% for (let row of rows) { %>
@@ -63,21 +64,41 @@
 
                 <li id="subject"><%= row.subject %></li>
                 <li id="description"><%= row.description %></li>
-                 <a href="/quizpage/<%= row.id %>" class="article_button">Start Quiz</a>
-                  <!-- <button id="startquiz-button" class="article_button" type="submit">"Start Quiz</button> -->
-                <!-- </form> -->
-                <button >Share</button>
+
+                  <button id="startquiz-button" class="article_button" type="submit"><a href="/quizpage/<%= row.id %>" class="article_button">Start Quiz</a></button>
+                  <button id="clipboardlink" class="article_button" type="submit"><a href="http://localhost:8080/quizpage/?subject=Web%20Developement&description=Junior%20developer%20interview%20questions">Share Quiz</a></button>
+
               </section>
             <% } %>
             <% } %>
             </ul>
           </div>
+          <div id="myPopup" class="modal">
+            <!-- Popupt -->
+              <div class="popup-content">
+                <span class="close">&times;</span>
+
+                <p> Copy the quiz link to share with a friend!  </p>
+                <p> Quiz URL: <input style="width: 78%;" value="http://localhost:8080/quizpage/?subject=Web%20Developement&description=Junior%20developer%20interview%20questions"> </input>  </p>
+              </div>
+
+           </div>
       </article>
   </body>
 </html>
-<!-- <script>
-  document.getElementById("startquiz-button").onclick = function (){
-    location.href = `/quizpage/?subject=${document.getElementById('subject').innerHTML}&description=${document.getElementById('description').innerHTML}`
-  }
+ <script>
 
-</script> -->
+  document.getElementById('clipboardlink').onclick = function () {
+    event.preventDefault();
+    // alert("You've submitted the quiz, you got 4/5 correct")
+    //create a  popup
+    var modal = document.getElementById("myPopup");
+    modal.style.display = "block";
+
+    // Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+span.onclick = function() {
+  modal.style.display = "none";
+}
+  }
+</script>
