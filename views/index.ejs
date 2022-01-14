@@ -63,8 +63,8 @@
 
                 <li id="subject"><%= row.subject %></li>
                 <li id="description"><%= row.description %></li>
-
-                  <button id="startquiz-button" class="article_button" type="submit">Start Quiz</button>
+                 <a href="/quizpage/<%= row.id %>" class="article_button">Start Quiz</a>
+                  <!-- <button id="startquiz-button" class="article_button" type="submit">"Start Quiz</button> -->
                 <!-- </form> -->
                 <button >Share</button>
               </section>
@@ -75,9 +75,9 @@
       </article>
   </body>
 </html>
-<script>
+<!-- <script>
   document.getElementById("startquiz-button").onclick = function (){
     location.href = `/quizpage/?subject=${document.getElementById('subject').innerHTML}&description=${document.getElementById('description').innerHTML}`
   }
 
-</script>
+</script> -->

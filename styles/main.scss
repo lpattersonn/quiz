@@ -4,12 +4,17 @@
 body {
   font-family: sans-serif;
   display: flex;
+  counter-reset: section;
   justify-content: center;
   // align-items: center;
   min-height: 100vh;
   background-color: white;
 }
-
+.valueTwo::before {
+  font-family: "Bangers", sans-serif;
+  counter-increment: section;
+  content: counter(section) " ";
+  }
 /* nav section */
 header {
   font-family: sans-serif;

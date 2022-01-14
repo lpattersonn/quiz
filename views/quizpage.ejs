@@ -31,40 +31,25 @@
     <img class="main_image" src="https://media.istockphoto.com/vectors/quiz-in-comic-pop-art-style-quiz-brainy-game-word-vector-illustration-vector-id1186386668?k=20&m=1186386668&s=612x612&w=0&h=tUvqWXoNa2OsJ1YsvZwr3JKOggtzfr_KHuopigindPA=" alt="midterm_group_5">
       <article>
         <div>
-          <% if(rows.length>1) { %>
-
-          <div class="welcome">
-            <b>Welcome to the </b> <%= rows[0].subject %> Quiz
-          </div>
-          <div class="welcome">
-            <b>Quiz Description </b> <%= rows[0].description %>
-          </div>
+          <% if(questions) { %>
 
         </div>
       </article>
       <article class=quiz_questions>
-        
+
           <form >
-            <% for (let item of rows) { %>
-            <p>Question Number <%= item.id %>: <%=item.question%></p>
-            <input type="radio"  name=<%= item.id %>  >
-          <%= item.answer1 %>
-        </input>
-          <!--   <label ><%= item.answer1 %></label><br> -->
-            <input type="radio"  name=<%= item.id %> >
-         <%= item.answer2 %>
-            </input>
-          <!--   <label for="css"><%= item.answer2 %></label><br> -->
-            <input type="radio"  name=<%= item.id %>>
-          <%= item.answer3 %>
-            </input>
-          <!--   <label for="javascript"><%= item.answer3 %></label> -->
-            <input type="radio" name=<%= item.id %> >
-          <%= item.answer4 %>
-          </input>
-          <!--   <label for="javascript"><%= item.answer4 %></label> -->
-          
-            <br>  
+            <% for (let item of questions) { %>
+              <!-- <ul>
+                <li>item.question</li>
+              <li>item.question</li>
+            </ul> -->
+            <div id="counter"><h4 class="text"> Question # </h4><h4 class="valueTwo"></h4></div><p><%= item.question %></p>
+
+           <% for (let keys of item.options) { %>
+            <input type="radio"  name="answer" value="<%= item.options %>">
+
+            <%= keys.answer %>
+            <% } %>
             <% } %>
             <button  id="finish-quiz" type="submit" > Submit </button>
           </form>
@@ -75,31 +60,15 @@
               <span class="close">&times;</span>
               <p>Congratulations, you've gotten 4/4!</p>
               <p> Click the SHARE button to share results with a friend!
-                 
+
               </p>
               <button> <a href="/results"> SHARE </a> </button>
             </div>
-          
+
           </div>
-      
+
 
       </article>
       <% } %>
   </body>
 </html>
-<script>
-  document.getElementById('finish-quiz').onclick = function () {
-    event.preventDefault();
-    // alert("You've submitted the quiz, you got 4/5 correct")
-    //create a  popup
-    var modal = document.getElementById("myPopup");
-    modal.style.display = "block";
-
-    // Get the <span> element that closes the modal
-var span = document.getElementsByClassName("close")[0];
-span.onclick = function() {
-  modal.style.display = "none";
-}
-  }
-  </script>
-
