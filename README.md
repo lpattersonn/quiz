@@ -10,7 +10,7 @@
 -->
 [![Contributors][contributors-shield]][https://github.com/lpattersonn/midterm-group-5/graphs/contributors]
 [![Forks][forks-shield]][forks-url]
-[![Stargazers][stars-shield]][https://img.shields.io/github/watchers/lpattersonn/midterm-group-5?logo=GitHub&style=flat-square]
+https://img.shields.io/github/watchers/lpattersonn/midterm-group-5?logo=GitHub&style=flat-square
 [![Issues][issues-shield]][issues-url]
 
 <!-- PROJECT LOGO -->
