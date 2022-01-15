@@ -1,8 +1,9 @@
 <div id="top"></div>
-
+<p align="right">
 ![stars](https://img.shields.io/github/stars/lpattersonn/midterm-group-5?logo=GitHub&style=flat-square)
 ![watchers](https://img.shields.io/github/watchers/lpattersonn/midterm-group-5?logo=GitHub&style=flat-square)
 ![forks](https://img.shields.io/github/forks/lpattersonn/midterm-group-5?logo=GitHub&style=flat-square)
+</p>
 
 <!-- PROJECT LOGO -->
 <br />
