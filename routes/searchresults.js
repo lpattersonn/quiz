@@ -1,20 +1,28 @@
-const express = require('express');
-const router  = express.Router();
+const express = require("express");
+const router = express.Router();
 
 module.exports = (db) => {
-  router.get('/',(req,res)=> {
-    console.log(req.query.search);
+  router.post("/", (req, res) => {
+    console.log(req.body.search);
     let searchValue = req.query.search;
-    db.query(`SELECT * FROM quizzes WHERE (quizzes.description ILIKE '%${searchValue}%') OR (quizzes.subject ILIKE '%${searchValue}%') ;`)
-    .then(data => {
-        // const rows = data.rows;
-      res.render('searchresults', data);
-    }).catch(err => {
-      res
-      .status(500)
-      .json({ error: err.message });
-    });
+    return db
+      .query(
+        `
+    SELECT subject, description
+    FROM quizzes
+    WHERE subject ILIKE '%' || $1 || '%'
+    OR description ILIKE '%' || $2 || '%';`,
+        [req.body.search, req.body.search]
+      )
+      .then((data) => {
+        console.log(data);
+        res.render("searchresults", data);
+      })
+      .catch((err) => {
+        res.status(500).send("Please try again");
+        console.log(err.message);
+      });
   });
 
   return router;
- }
+};

@@ -14,11 +14,11 @@ body {
   font-family: "Bangers", sans-serif;
   counter-increment: section;
   content: "Question # " counter(section);
-  }
+}
 .valueTwo {
   border-color: black;
   border-width: 25em;
-  }
+}
 
 /* nav section */
 header {
@@ -70,7 +70,7 @@ a {
 .button_arrow {
   margin-bottom: 30px;
   display: flex;
-    flex-direction: column;
+  flex-direction: column;
 }
 .main_search {
   text-align: left;
@@ -188,29 +188,34 @@ a {
 .quiz_body {
   margin-right: 2em;
   display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
 }
-.quiz_body input{
+.quiz_body input {
   margin-right: 2em;
   padding-right: 191px;
   display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
 }
 .quiz_head {
   margin-right: 2em;
   margin-bottom: -10px;
   display: flex;
-    flex-direction: row;
-    justify-content: left;
-    align-items: left;
+  flex-direction: row;
+  justify-content: left;
+  align-items: left;
 }
 .quiz_head li {
   font-size: 18px;
   padding-right: 191px;
+}
+.page_name {
+  font-size: 18px;
+  padding-right: 191px;
+  margin-left: 49px;
 }
 .quiz_questions li,
 button {
@@ -250,7 +255,6 @@ button {
   height: 40px;
   background-color: #5dd8ebf3;
 }
-
 
 /* arrow */
 .arrow {
@@ -303,8 +307,8 @@ button {
   width: 100%; /* Full width */
   height: 100%; /* Full height */
   overflow: auto; /* Enable scroll if needed */
-  background-color: rgb(0,0,0); /* Fallback color */
-  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  background-color: rgb(0, 0, 0); /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
 }
 /* Modal Content */
 .popup-content {
@@ -328,7 +332,7 @@ button {
   text-decoration: none;
   cursor: pointer;
 }
-.welcome{
+.welcome {
   font-size: 30px;
 }
 .popup-content {
@@ -359,9 +363,9 @@ button {
 .radio_button {
   margin-bottom: 10px;
   display: flex;
-    flex-direction: row;
-    justify-content: left;
-    align-items: center;
+  flex-direction: row;
+  justify-content: left;
+  align-items: center;
 }
 .radio_button input[type="radio"] {
   margin-left: -12px;
@@ -375,4 +379,3 @@ button {
   margin-bottom: 20px;
   margin-left: 4px;
 }
-

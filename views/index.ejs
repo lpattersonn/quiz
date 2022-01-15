@@ -9,7 +9,6 @@
     <script type="text/javascript" src="/vendor/jquery-3.0.0.js"></script>
     <script type="text/javascript" src="/scripts/app.js"></script>
     <!-- <script type="text/javascript" src="/scripts/clipboard.js"></script> -->
-
   </head>
   <header>
     <!-- Nav -->
@@ -31,23 +30,24 @@
    <div class="mainbody">
     <img class="main_image" src="https://media.istockphoto.com/vectors/quiz-in-comic-pop-art-style-quiz-brainy-game-word-vector-illustration-vector-id1186386668?k=20&m=1186386668&s=612x612&w=0&h=tUvqWXoNa2OsJ1YsvZwr3JKOggtzfr_KHuopigindPA=" alt="midterm_group_5">
     <!-- Search Area -->
-    <form class="mainpage_searcharea" action="/searchresults" >
+    <form method="POST" action="/searchresults" class="mainpage_searcharea">
       <div>
         <input type="text" placeholder="Search..." class="main_search" name="search">
       </div>
     <div class="button_arrow">
       <div class="main_button">
         <button class="search_button" type="submit">Search</button>
-        <button class="mainpage_quizbutton" type="submit">Start Quiz</button>
+        <button class="mainpage_quizbutton" type="submit"><a href="/myquiz">My Quiz</a></button>
       </div>
+    </form>
+      <!-- Animated arrow section -->
         <div class="arrow">
           <span></span>
           <span></span>
           <span></span>
         </div>
-        <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script> <p id="p1">P1: I am paragraph 1</p> <p id="p2">P2: I am a second paragraph</p> <button onclick="copyToClipboard('#p1')">Copy P1</button> <button onclick="copyToClipboard('#p2')">Copy P2</button> <br/><br/><input type="text" placeholder="Paste here for test" /> -->
         </div>
-      </form>
+      <!-- Show public quiz sections -->
       <article class="quiz_questions">
         <div>
         <ul class="quiz_head">
@@ -65,35 +65,31 @@
                 <li id="description"><%= row.description %></li>
 
                   <button id="startquiz-button" class="article_button" type="submit"><a href="/quizpage/<%= row.id %>" class="article_button">Start Quiz</a></button>
-                  <button id="clipboardlink" class="clipboardbuttonOne" type="submit"><a href="http://localhost:8080/quizpage/?subject=Web%20Developement&description=Junior%20developer%20interview%20questions">Share Quiz</a></button>
-
+                  <button id="clipboardlink" class="clipboardbuttonOne" type="submit">Share Quiz</button>
+ <!-- Popupt -->
+ <div id="myPopup" class="modal">
+  <div class="popup-content">
+    <span class="close">&times;</span>
+    <p> Copy the quiz link to share with a friend!  </p>
+    <p> Quiz URL: <input style="width: 78%;" value="http://localhost:8080/quizpage/<%= row.id %>"> </input>  </p>
+  </div>
+</div>
               </section>
             <% } %>
             <% } %>
             </ul>
           </div>
-          <div id="myPopup" class="modal">
-            <!-- Popupt -->
-              <div class="popup-content">
-                <span class="close">&times;</span>
 
-                <p> Copy the quiz link to share with a friend!  </p>
-                <p> Quiz URL: <input style="width: 78%;" value="http://localhost:8080/quizpage/?subject=Web%20Developement&description=Junior%20developer%20interview%20questions"> </input>  </p>
-              </div>
-
-           </div>
       </article>
   </body>
 </html>
  <script>
-
   document.getElementById('clipboardlink').onclick = function () {
     event.preventDefault();
     // alert("You've submitted the quiz, you got 4/5 correct")
     //create a  popup
     var modal = document.getElementById("myPopup");
     modal.style.display = "block";
-
     // Get the <span> element that closes the modal
 var span = document.getElementsByClassName("close")[0];
 span.onclick = function() {

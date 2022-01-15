@@ -5,8 +5,7 @@ const router = express.Router();
 
 module.exports = (db) => {
   router.get("/", (req, res) => {
-    res.render("createquiz")
-    .catch((err) => {
+    res.render("createquiz").catch((err) => {
       res.status(500).json({ error: err.message });
     });
   });

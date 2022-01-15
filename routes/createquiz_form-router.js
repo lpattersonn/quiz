@@ -19,7 +19,7 @@ module.exports = (db) => {
     )
       .then((body) => {
         console.log(body.rows[0]);
-        res.render("createquestion", {...body.rows[0], questionTotal: 0});
+        res.render("createquestion", { ...body.rows[0], questionTotal: 0 });
       })
       .catch((err) => {
         res.status(500).json({ error: err.message });

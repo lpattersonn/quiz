@@ -19,7 +19,7 @@ form {
 section {
   margin: 20px;
   display: flex;
-    flex-direction: column;
+  flex-direction: column;
 }
 section button {
   margin: 1em 1em;
@@ -80,9 +80,9 @@ label {
   margin-right: 1em;
   margin-bottom: 10px;
   display: flex;
-    justify-content: left;
-    flex-direction: row;
-    align-items: center;
+  justify-content: left;
+  flex-direction: row;
+  align-items: center;
 }
 #counter .text {
   font-family: "Bangers", sans-serif;

@@ -13,24 +13,29 @@ module.exports = (db) => {
     )
       .then((body) => {
         console.log(body.rows);
-        db.query(`
+        db.query(
+          `
         SELECT count(questions.*) as total_questions
         FROM questions
-        WHERE quiz_id=$1;`
-        , [req.body.quizid])
-        .then((data) => {
-          const questionTotal = Number(data.rows[0].total_questions);
-          console.log(questionTotal)
-          res.render("createquestion", {id: req.body.quizid, questionTotal});
-        })
-        .catch((err) => {
-          console.log(err.message)
-          res.status(500).send("Unable to complete action please try again")
-        })
+        WHERE quiz_id=$1;`,
+          [req.body.quizid]
+        )
+          .then((data) => {
+            const questionTotal = Number(data.rows[0].total_questions);
+            console.log(questionTotal);
+            res.render("createquestion", {
+              id: req.body.quizid,
+              questionTotal,
+            });
+          })
+          .catch((err) => {
+            console.log(err.message);
+            res.status(500).send("Unable to complete action please try again");
+          });
       })
       .catch((err) => {
         console.log(err.message);
-        res.status(500).send("Unable to complete action please try again")
+        res.status(500).send("Unable to complete action please try again");
       });
   });
   return router;
