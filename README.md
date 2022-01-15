@@ -8,9 +8,9 @@
 *** for contributors-url, forks-url, etc. This is an optional, concise syntax you may use.
 *** https://www.markdownguide.org/basic-syntax/#reference-style-links
 -->
-[![Contributors](https://github.com/lpattersonn/midterm-group-5/graphs/contributors)
+[![stars](https://img.shields.io/github/stars/lpattersonn/midterm-group-5?logo=GitHub&style=flat-square)
 [![watchers](https://img.shields.io/github/watchers/lpattersonn/midterm-group-5?logo=GitHub&style=flat-square)
-[![Issues][issues-shield]][issues-url]
+[![forks](https://img.shields.io/github/forks/lpattersonn/midterm-group-5?logo=GitHub&style=flat-square)
 
 <!-- PROJECT LOGO -->
 <br />
