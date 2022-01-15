@@ -8,7 +8,7 @@
 *** for contributors-url, forks-url, etc. This is an optional, concise syntax you may use.
 *** https://www.markdownguide.org/basic-syntax/#reference-style-links
 -->
-[![Contributors][contributors-shield]][https://github.com/lpattersonn/midterm-group-5/graphs/contributors]
+[![Contributors](https://github.com/lpattersonn/midterm-group-5/graphs/contributors)
 [![Forks][forks-shield]][forks-url]
 https://img.shields.io/github/watchers/lpattersonn/midterm-group-5?logo=GitHub&style=flat-square
 [![Issues][issues-shield]][issues-url]
