@@ -6,7 +6,8 @@ const router = express.Router();
 module.exports = (db) => {
   router.get("/", (req, res) => {
     res.render("createquiz").catch((err) => {
-      res.status(500).json({ error: err.message });
+      res.status(500).send("Could not complete action, please try agin");
+      console.log(err.message);
     });
   });
   return router;
