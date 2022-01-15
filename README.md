@@ -55,7 +55,10 @@
 
 Quiz! is an app that lets you create quizzes and share them between friends. The creator of the quiz can view and share all the results at the end of the quiz. This app was built by and Abyan Mohamed, and Leshan Patterson.
 
-![Product Name Screen Shot](https://github.com/lpattersonn/midterm-group-5/blob/master/public/ducuments/images/homepage.png?raw=true)
+![app home page](https://github.com/lpattersonn/midterm-group-5/blob/master/public/ducuments/images/homepage.png?raw=true)
+![app home page](https://github.com/lpattersonn/midterm-group-5/blob/master/public/ducuments/images/publicquiz.png?raw=true)
+![app home page](https://github.com/lpattersonn/midterm-group-5/blob/master/public/ducuments/images/myprivatequiz.png?raw=true)
+![app home page](https://github.com/lpattersonn/midterm-group-5/blob/master/public/ducuments/images/quizquestions.png?raw=true)
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
