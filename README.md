@@ -1,13 +1,4 @@
 <div id="top"></div>
-<!--
-*** Thanks for checking out the Best-README-Template. If you have a suggestion
-*** that would make this better, please fork the repo and create a pull request
-*** or simply open an issue with the tag "enhancement".
-*** Don't forget to give the project a star!
-*** Thanks again! Now go create something AMAZING! :D
--->
-
-
 
 <!-- PROJECT SHIELDS -->
 <!--
@@ -26,7 +17,7 @@
 <br />
 <div align="center">
   <a href="https://github.com/lpattersonn/midterm-group-5">
-    <img src="https://media.istockphoto.com/vectors/quiz-in-comic-pop-art-style-quiz-brainy-game-word-vector-illustration-vector-id1186386668?k=20&m=1186386668&s=612x612&w=0&h=tUvqWXoNa2OsJ1YsvZwr3JKOggtzfr_KHuopigindPA=" alt="midterm_group_5" alt="Logo" width="80" height="80">
+    <img src="https://media.istockphoto.com/vectors/quiz-in-comic-pop-art-style-quiz-brainy-game-word-vector-illustration-vector-id1186386668?k=20&m=1186386668&s=612x612&w=0&h=tUvqWXoNa2OsJ1YsvZwr3JKOggtzfr_KHuopigindPA=" alt="midterm_group_5" alt="Logo" width="200" height="200">
   </a>
 
   <h3 align="center">Quiz App</h3>
@@ -117,7 +108,6 @@ _Below is an example of how you can instruct your audience on installing and set
 <p align="right">(<a href="#top">back to top</a>)</p>
 
 <!-- ROADMAP -->
-
 ## Roadmap
 
 - [ ] Multi-language Support
@@ -126,8 +116,7 @@ _Below is an example of how you can instruct your audience on installing and set
 
 See the [open issues](https://github.com/othneildrew/Best-README-Template/issues) for a full list of proposed features (and known issues).
 
-<p align="right">(<a href="#top">back to top</a>)</p>
-
+<p align="right">(<a href="#top">back to top</a>)</p>\
 
 <!-- CONTRIBUTING -->
 ## Contributing
@@ -146,7 +135,7 @@ Don't forget to give the project a star! Thanks again!
 <!-- CONTACT -->
 ## Contact
 
-Leshan Patterson - [@lpattersonnn](https://twitter.com/lpattersonn)
+Leshan Patterson - [@lpattersonnn](https://twitter.com/lpattersonnn)
 
 Project Link: [https://github.com/lpattersonn/midterm-group-5.git](https://github.com/lpattersonn/midterm-group-5.git)
 
