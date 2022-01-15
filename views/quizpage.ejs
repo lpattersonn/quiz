@@ -8,6 +8,23 @@
     <link rel="stylesheet" href="/styles/layout.css" type="text/css" />
     <script type="text/javascript" src="/vendor/jquery-3.0.0.js"></script>
     <script type="text/javascript" src="/scripts/app.js"></script>
+    <script>
+  function shuffleArray(array) {
+  let curId = array.length;
+  // There remain elements to shuffle
+  while (0 !== curId) {
+    // Pick a remaining element
+    let randId = Math.floor(Math.random() * curId);
+    curId -= 1;
+    // Swap it with the current element.
+    let tmp = array[curId];
+    array[curId] = array[randId];
+    array[randId] = tmp;
+  }
+  console.log(questions.options.answer)
+  return array;
+}
+  </script>
   </head>
   <header>
     <!-- Nav -->
@@ -32,20 +49,29 @@
       <article>
         <div>
           <% if(questions) { %>
-
         </div>
       </article>
       <article class=quiz_questions>
-
           <form method="GET" action="/results">
             <% for (let item of questions) { %>
-              <!-- <ul>
-                <li>item.question</li>
-              <li>item.question</li>
-            </ul> -->
             <div id="counter"><h4 class="text"></h4><h3 class="valueTwo"></h3></div>
             <p><%= item.question %></p>
-              <% for (let keys of item.options) { %>
+            <!-- Answer shuffle function -->
+            <% function shuffleArray(array) {
+              let curId = array.length;
+              // There remain elements to shuffle
+              while (0 !== curId) {
+                // Pick a remaining element
+                let randId = Math.floor(Math.random() * curId);
+                curId -= 1;
+                // Swap it with the current element.
+                let tmp = array[curId];
+                array[curId] = array[randId];
+                array[randId] = tmp;
+              }
+              return array;
+            } %>
+              <% for (let keys of shuffleArray(item.options)) { %>
                 <div class="startquizform">
                   <section class="radio_button">
                 <input type="radio"  name="<%= item.question %>" value="<%= keys.answer %>">
@@ -69,3 +95,4 @@
       <% } %>
   </body>
 </html>
+

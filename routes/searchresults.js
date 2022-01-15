@@ -8,7 +8,7 @@ module.exports = (db) => {
     return db
       .query(
         `
-    SELECT subject, description
+    SELECT subject, description, id
     FROM quizzes
     WHERE subject ILIKE '%' || $1 || '%'
     OR description ILIKE '%' || $2 || '%';`,
