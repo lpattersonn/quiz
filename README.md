@@ -1,13 +1,5 @@
 <div id="top"></div>
 
-<!-- PROJECT SHIELDS -->
-<!--
-*** I'm using markdown "reference style" links for readability.
-*** Reference links are enclosed in brackets [ ] instead of parentheses ( ).
-*** See the bottom of this document for the declaration of the reference variables
-*** for contributors-url, forks-url, etc. This is an optional, concise syntax you may use.
-*** https://www.markdownguide.org/basic-syntax/#reference-style-links
--->
 ![stars](https://img.shields.io/github/stars/lpattersonn/midterm-group-5?logo=GitHub&style=flat-square)
 ![watchers](https://img.shields.io/github/watchers/lpattersonn/midterm-group-5?logo=GitHub&style=flat-square)
 ![forks](https://img.shields.io/github/forks/lpattersonn/midterm-group-5?logo=GitHub&style=flat-square)
@@ -63,7 +55,7 @@
 
 Quiz! is an app that lets you create quizzes and share them between friends. The creator of the quiz can view and share all the results at the end of the quiz. This app was built by and Abyan Mohamed, and Leshan Patterson.
 
-[![Product Name Screen Shot][product-screenshot]](https://example.com)
+![Product Name Screen Shot](https://github.com/lpattersonn/midterm-group-5/blob/master/public/ducuments/images/homepage.png?raw=true)
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
