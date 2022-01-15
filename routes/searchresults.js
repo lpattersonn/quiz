@@ -8,10 +8,11 @@ module.exports = (db) => {
     return db
       .query(
         `
-    SELECT subject, description, id
+    SELECT subject, description, id, public
     FROM quizzes
     WHERE subject ILIKE '%' || $1 || '%'
-    OR description ILIKE '%' || $2 || '%';`,
+    OR description ILIKE '%' || $2 || '%'
+    AND public = true;`,
         [req.body.search, req.body.search]
       )
       .then((data) => {
