@@ -90,6 +90,9 @@ Quiz! is an app that lets you create quizzes and share them between friends. The
    ```sh
    npm run local
    ```
+5. After the server has initiated, log-in as user 1 by pasting 
+http://localhost:8080/login/1 in the browser for the project to show the quizes created by you as user 1 in the My Quiz tab. 
+   
 <p align="right">(<a href="#top">back to top</a>)</p>
 
 <!-- ROADMAP -->
