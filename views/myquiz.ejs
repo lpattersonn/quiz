@@ -2,7 +2,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Quizlett</title>
+    <title>Quiz!: My Quiz</title>
     <link rel="stylesheet" href="/vendor/normalize-4.1.1.css" type="text/css" />
     <link rel="stylesheet" href="/vendor/border-box.css" type="text/css" />
     <link rel="stylesheet" href="/styles/myquiz.css" type="text/css" />
@@ -59,9 +59,9 @@
                       </div>
                 </section>
                 <% } %></div>
-              <div><button class="article_button" type="submit"><a href="/quizpage/<%= row.quizid %>">Start Quiz</a></button></div>
-
-
+              <div>
+                <button class="article_button" type="submit"><a href="/quizpage/<%= row.quizid %>">Start Quiz</a></button>
+              </div>
             </section>
           <% } %>
           <% } %>

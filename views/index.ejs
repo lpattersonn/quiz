@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Quizlett</title>
+    <title>Quiz!: Home</title>
     <link rel="stylesheet" href="/vendor/normalize-4.1.1.css" type="text/css" />
     <link rel="stylesheet" href="/vendor/border-box.css" type="text/css" />
     <link rel="stylesheet" href="/styles/main.css" type="text/css" />
@@ -63,17 +63,11 @@
 
                 <li id="subject"><%= row.subject %></li>
                 <li id="description"><%= row.description %></li>
-
+                  <!-- Start Quiz -->
                   <button id="startquiz-button" class="article_button" type="submit"><a href="/quizpage/<%= row.id %>" class="article_button">Start Quiz</a></button>
-                  <button id="clipboardlink" class="clipboardbuttonOne" type="submit">Share Quiz</button>
- <!-- Popupt -->
- <div id="myPopup" class="modal">
-  <div class="popup-content">
-    <span class="close">&times;</span>
-    <p> Copy the quiz link to share with a friend!  </p>
-    <p> Quiz URL: <input style="width: 78%;" value="http://localhost:8080/quizpage/<%= row.id %>"> </input>  </p>
-  </div>
-</div>
+                  <!-- Share quiz -->
+                  <button id="clipboardlink" class="clipboardbuttonOne" type="submit" onclick="alert('Copy the quiz link to share with a friend! Quiz URL:                     http://localhost:8080/quizpage/<%= row.id %>')">Share Quiz</button>
+
               </section>
             <% } %>
             <% } %>
@@ -83,17 +77,4 @@
       </article>
   </body>
 </html>
- <script>
-  document.getElementById('clipboardlink').onclick = function () {
-    event.preventDefault();
-    // alert("You've submitted the quiz, you got 4/5 correct")
-    //create a  popup
-    var modal = document.getElementById("myPopup");
-    modal.style.display = "block";
-    // Get the <span> element that closes the modal
-var span = document.getElementsByClassName("close")[0];
-span.onclick = function() {
-  modal.style.display = "none";
-}
-  }
-</script>
+
