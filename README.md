@@ -130,7 +130,7 @@ Project Link: [https://github.com/lpattersonn/midterm-group-5.git](https://githu
 <p align="right">(<a href="#top">back to top</a>)</p>
 
 <!-- ACKNOWLEDGMENTS -->
-## Acknowledgmentsd
+## Acknowledgments
 
 * [GitHub Emoji Cheat Sheet](https://www.webpagefx.com/tools/emoji-cheat-sheet)
 * [Malven's Flexbox Cheatsheet](https://flexbox.malven.co/)
