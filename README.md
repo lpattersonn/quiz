@@ -80,7 +80,7 @@ Quiz! is an app that lets you create quizzes and share them between friends. The
 
 2. Clone the repo
    ```sh 
-   git clone https://github.com/lpattersonn/midterm-group-5.git
+   git clone https://github.com/lpattersonn/quiz.git
    ```
 3. Install NPM packages
    ```sh
@@ -125,7 +125,7 @@ Don't forget to give the project a star! Thanks again!
 
 Leshan Patterson - [@lpatters](https://ca.linkedin.com/in/lpatters)
 
-Project Link: [https://github.com/lpattersonn/midterm-group-5.git](https://github.com/lpattersonn/midterm-group-5.git)
+Project Link: [https://github.com/lpattersonn/quiz.git](https://github.com/lpattersonn/quiz.git)
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
