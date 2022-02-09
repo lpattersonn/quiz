@@ -14,7 +14,7 @@
   <h3 align="center">Quiz App</h3>
 
   <p align="center">
-    An app that lets you create quizzes and share them between friends. The creator of the quiz can view and share all the results at the end of the quiz.
+    An app that lets you create quizzes and share them with friends. The creator of the quiz can view and share all the results at the end of the quiz.
     <br />
     <a href="https://github.com/lpattersonn/midterm-group-5"><strong>Explore the docs »</strong></a>
     <br />
@@ -53,7 +53,7 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-Quiz! is an app that lets you create quizzes and share them between friends. The creator of the quiz can view and share all the results at the end of the quiz. This app was built by Abyan Mohamed, and Leshan Patterson.
+Quiz! is an app that lets you create quizzes and share them with friends. The creator of the quiz can view and share all the results at the end of the quiz.
 
 ![app home page](https://github.com/lpattersonn/midterm-group-5/blob/master/public/ducuments/images/homepage.png?raw=true)
 ![app home page](https://github.com/lpattersonn/midterm-group-5/blob/master/public/ducuments/images/myprivatequiz.png?raw=true)
